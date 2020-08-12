@@ -12,7 +12,7 @@ const PARTICLES = styled.div`
 
 const ParticlesBackground = ()=>(
 	<PARTICLES>
-		<Particles height={window.outerHeight} params={particleStyle}/>
+		<Particles height='100vh' params={particleStyle}/>
 	</PARTICLES>
 )
 
