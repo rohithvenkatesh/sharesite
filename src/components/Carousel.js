@@ -18,7 +18,7 @@ import tent from "../images/tent.png"
 const images = [beach_chairs, beach_cruiser, canoe, cooler, drink_dispenser, jumper_cables2, skateboard, surfboard, tent].map(image => <img src={image} />)
 
 const fadein = keyframes`
-	0% {opacity: 0;}
+	0% {opacity: 0; visiblity: hidden}
 	100% {opacity: 1; visibility: visible}
 `
 const CAROUSEL = styled.div`
