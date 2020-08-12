@@ -18,6 +18,11 @@ const LOGO = styled.div`
 	border-radius: 200px;
 	letter-spacing: 1px;
 	animation: 3s ${fadein} 0s ease, 2s ${goleft} 1.7s ease forwards;
+
+	@media (max-width: 500px) {
+		animation: 2s ${fadein} 0s ease;
+		font-size: 7em;
+  }
 `
 
 const Logo = () => (

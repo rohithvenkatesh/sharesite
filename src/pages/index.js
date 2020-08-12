@@ -15,12 +15,24 @@ const ROW = styled.div`
 	left: 25%;
 	top: 10%;
 	align-items: center;
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+		top: 73%;
+    left: 50%;
+    margin-right: -50%;
+		transform: translate(-50%, -50%);
+  }
 `
 const COL = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin: -12em -8em 0 13em;
+	margin: -16em -8em 0 13em;
 	justify-content: left;
+
+	@media (max-width: 500px) {
+		margin: 0px;
+  }
 `
 export default ()=>{
 
@@ -40,7 +52,7 @@ export default ()=>{
 	})
 
 	return (
-		<div>
+		<div style={{display: 'flex'}}>
 			<ParticlesBackground/>
 			<Navbar/>
 			<ROW>

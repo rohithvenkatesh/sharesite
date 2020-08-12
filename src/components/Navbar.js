@@ -3,19 +3,22 @@ import styled from 'styled-components'
 
 const NAVBAR = styled.nav`
 	width: 100vw;
-	/* background-color: pink; */
 	background-color: transparent;
 	position: absolute;
 	color: #000;
-	padding-top: 30px;
+	padding: 30px 0 0 30px;
 	z-index: 1;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	@media (max-width: 500px){
+		padding: 15px 0 0 15px;
+		width: 0;
+	}
 `
 
 const TITLE = styled.div`
-	padding-left: 40px;
 	font-size: 2.3em;
 	font-weight: 400;
 	letter-spacing: 2px;
@@ -24,14 +27,21 @@ const TITLE = styled.div`
 const NAVLIST = styled.div`
 	display: flex;
 	justify-content: space-between;
+	@media (max-width: 500px){
+		visibility: hidden;
+	}
 `
 const NAVBUTTON = styled.a`
 	font-size: 1.6em;
-	padding-right: 40px;
+	padding-right: 50px;
 	text-decoration: none;
 	color: inherit;
+	
+	@media (max-width: 500px) {
+		padding-right: 0
+	}
+	
 `
-
 
 const Navbar = ()=>(
 	<NAVBAR>

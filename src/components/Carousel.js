@@ -24,15 +24,21 @@ const fadein = keyframes`
 const CAROUSEL = styled.div`
 	box-shadow: 1px 1px 20px 30px #ddd;
 	opacity: 0;
+	visibility: hidden;
 	border-radius: 1000px;
-	padding: 0;
+	padding: 0; margin: 0;
 	width: 30em;
 	animation: 3s ${fadein} ease forwards;
-	visibility: hidden;
 	animation-delay: 3s;
 	background: #ddd;
-`
 
+	@media (max-width: 500px) {
+		width: 20em;
+		margin-top: 8em;
+		animation: 3s ${fadein} ease forwards;
+		animation-delay: 1s;
+  }
+`
 
 class Carousel extends Component {
 	render() {

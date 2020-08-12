@@ -18,7 +18,6 @@ const spin = keyframes`
   80% { content: "Bicycles"; }
   90% { content: "Chargers"; }
 	100% { content: "Coolers"; }
-	
 `
 
 const change = keyframes`
@@ -37,6 +36,7 @@ const SUBTEXT = styled.div`
 	font-weight: 300;
 	border-radius: 100px;
 	width: 7em;
+	height: 0;
 	visibility: hidden;
 
 	&:after {
@@ -44,9 +44,19 @@ const SUBTEXT = styled.div`
 		background: #eee;
 		padding: 0.2em;
 		border-radius: 50px;
-		animation: 2s ${fadein}, 15s ${change} ease-in-out infinite;
+		animation: 2s ${fadein}, 15s ${spin} ease-in-out infinite;
 		animation-delay: 4s, 6s;
 		animation-fill-mode: forwards, both;
+	}
+	
+	@media (max-width: 500px){
+		margin-left: 0em; margin-top: -0.3em;
+		width: 8em;
+		font-size: 2em;
+
+		&:after {
+			animation-delay: 2s, 3s
+		}
 	}
 `
 

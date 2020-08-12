@@ -7,7 +7,7 @@ import particleStyle from './particleStyle_lines'
 const PARTICLES = styled.div`
 	position: absolute;
 	z-index: 0;
-	width: 100%
+	width: 100vw;
 `
 
 const ParticlesBackground = ()=>(
