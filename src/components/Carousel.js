@@ -23,7 +23,7 @@ const fadein = keyframes`
 `
 const CAROUSEL = styled.div`
 	box-shadow: 1px 1px 20px 30px #ddd;
-	opacity: 0.5;
+	opacity: 0;
 	border-radius: 1000px;
 	padding: 0;
 	width: 30em;
