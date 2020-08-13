@@ -47,15 +47,15 @@ const particleStyle ={
     },
     "line_linked": {
       "enable": true,
-      "distance": 150,
+      "distance": 200,
       // "color": "#a1faf8",
       "color": "#044949",
-      "opacity": 0.4,
-      "width": 1.8939842325812624
+      "opacity": 0.5,
+      "width": 1.3,
     },
     "move": {
       "enable": true,
-      "speed": 1,
+      "speed": 1.5,
       "direction": "none",
       "random": false,
       "straight": false,

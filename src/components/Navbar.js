@@ -12,7 +12,7 @@ const NAVBAR = styled.nav`
 	align-items: center;
 	justify-content: space-between;
 
-	@media (max-width: 500px){
+	@media screen and (min-width: 100px) and (max-width: 700px) {
 		padding: 15px 0 0 15px;
 		width: 0;
 	}
@@ -27,7 +27,7 @@ const TITLE = styled.div`
 const NAVLIST = styled.div`
 	display: flex;
 	justify-content: space-between;
-	@media (max-width: 500px){
+	@media screen and (min-width: 100px) and (max-width: 700px) {
 		visibility: hidden;
 	}
 `
@@ -37,7 +37,12 @@ const NAVBUTTON = styled.a`
 	text-decoration: none;
 	color: inherit;
 	
-	@media (max-width: 500px) {
+	&:hover {
+		color: #fff;
+		transition: color 0.3s ease;
+	}
+
+	@media screen and (min-width: 100px) and (max-width: 700px) {
 		padding-right: 0
 	}
 	
@@ -47,8 +52,8 @@ const Navbar = ()=>(
 	<NAVBAR>
 		<TITLE>/S/</TITLE>
 		<NAVLIST>
-			<NAVBUTTON href='#'>Categories</NAVBUTTON>
-			<NAVBUTTON href='#'>Purpose</NAVBUTTON>
+			<NAVBUTTON href='#' className='link'>Categories</NAVBUTTON>
+			<NAVBUTTON href='#' className='link'>Purpose</NAVBUTTON>
 		</NAVLIST>	
 	</NAVBAR>
 )

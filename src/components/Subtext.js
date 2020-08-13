@@ -41,7 +41,7 @@ const SUBTEXT = styled.div`
 
 	&:after {
 		content:"fuga";
-		background: #eee;
+		background: #fdfdfd;
 		padding: 0.2em;
 		border-radius: 50px;
 		animation: 2s ${fadein}, 15s ${spin} ease-in-out infinite;
@@ -57,6 +57,22 @@ const SUBTEXT = styled.div`
 		&:after {
 			animation-delay: 2s, 3s
 		}
+	}
+	
+	@media screen and (min-width: 700px) and (max-width: 1300px) {
+		margin-left: 0em; margin-top: -0.3em;
+		width: 8em;
+		font-size: 3em;
+
+		&:after {
+			animation-delay: 2s, 3s
+		}
+	}
+
+	@media screen and (min-width: 1301px) and (max-width: 1500px) {
+		margin-left: -1em; margin-top: -0.65em;
+		width: 8em;
+		font-size: 3em;
 	}
 `
 

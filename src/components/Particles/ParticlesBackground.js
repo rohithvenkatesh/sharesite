@@ -8,6 +8,12 @@ const PARTICLES = styled.div`
 	position: absolute;
 	z-index: 0;
 	width: 100vw;
+	height: 100vh;
+
+	@media screen and (orientation:landscape) {
+		width: 100vw;
+		height: 100vh;
+	}
 `
 
 const ParticlesBackground = ()=>(

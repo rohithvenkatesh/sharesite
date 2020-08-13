@@ -22,7 +22,7 @@ const fadein = keyframes`
 	100% {opacity: 1; visibility: visible}
 `
 const CAROUSEL = styled.div`
-	box-shadow: 1px 1px 20px 30px #ddd;
+	box-shadow: 1px 1px 20px 30px #eee;
 	opacity: 0;
 	visibility: hidden;
 	border-radius: 1000px;
@@ -30,18 +30,19 @@ const CAROUSEL = styled.div`
 	width: 30em;
 	animation: 3s ${fadein} ease forwards;
 	animation-delay: 3s;
-	background: #ddd;
+	background: #eee;
 
 	@media screen and (min-width: 100px) and (max-width: 700px) {
 		width: 20em;
 		margin-top: 8em;
 		animation: 3s ${fadein} ease forwards;
 		animation-delay: 1s;
+		border-radius: 100px;
 	}
 
-	@media screen and (min-width: 700px) and (max-width: 1000px) {
-		width: 20em;
-		margin-top: 18em;
+	@media screen and (min-width: 700px) and (max-width: 1300px) {
+		width: 30em;
+		margin-top: 12em;
 		animation: 3s ${fadein} ease forwards;
 		animation-delay: 1s;
 	}

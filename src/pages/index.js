@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import '../styles.sass'
@@ -12,13 +12,31 @@ import Cursor from '../components/Cursor'
 const ROW = styled.div`
 	display: flex;
 	position: absolute;
-	left: 25%;
+	left: 50%;
+	margin-right: -50%;	
+	transform: translate(-40%, 0%);
 	top: 10%;
 	align-items: center;
 
 	@media screen and (min-width: 100px) and (max-width: 700px) {
 		flex-direction: column;
-		top: 75%;
+		top: 600px;
+    left: 50%;
+    margin-right: -50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	@media screen and (min-width: 701px) and (max-width: 1100px) {
+		top: 800px;
+		flex-direction: column;
+    left: 50%;
+    margin-right: -50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	@media screen and (min-width: 1101px) and (max-width: 1300px) {
+		top: 850px;
+		flex-direction: column;
     left: 50%;
     margin-right: -50%;
 		transform: translate(-50%, -50%);
@@ -30,39 +48,50 @@ const COL = styled.div`
 	margin: -16em -8em 0 13em;
 	justify-content: left;
 
-	@media screen and (min-width: 100px) and (max-width: 700px) {
+	@media screen and (min-width: 100px) and (max-width: 1300px) {
 		margin: 0px;
   }
 `
-export default ()=>{
+export default () => {
 
-	useEffect(()=>{
+	useEffect(() => {
+		const links = document.querySelectorAll(".link");
 		const cursor = document.querySelector('.cursor')
+
+		const handleMouseEnter = () => {
+			cursor.style.width = '6em'
+			cursor.style.height = '6em'
+			cursor.style.zIndex = '0'
+			cursor.style.opacity = '0.9'
+		};
+		const handleMouseLeave = () => {
+			cursor.style.width = '1.3em'
+			cursor.style.height = '1.3em'
+			cursor.style.opacity = '1'
+		};
+		links.forEach(link => {
+			link.addEventListener("mouseenter", handleMouseEnter);
+			link.addEventListener("mouseleave", handleMouseLeave);
+		});
+
 		document.addEventListener('mousemove', (e) => {
 			cursor.style.left = `${e.pageX}px`
 			cursor.style.top = `${e.pageY}px`
 		});
-		document.addEventListener('mouseleave', () => {
-			cursor.style.display = "none"
-			console.log("MOUSE LEFT")
-		});
-		document.addEventListener('mouseenter', () => {
-			cursor.style.display = ""
-		});
 	})
 
 	return (
-		<div style={{display: 'flex'}}>
-			<ParticlesBackground/>
-			<Navbar/>
+		<div style={{ display: 'flex' }}>
+			<ParticlesBackground />
+			<Navbar />
 			<ROW>
 				<COL>
-					<Logo/>
-					<Subtext/>
+					<Logo />
+					<Subtext />
 				</COL>
-				<Carousel/>
+				<Carousel />
 			</ROW>
-			<Cursor/>
+			<Cursor />
 		</div>
 	)
 }
