@@ -16,9 +16,9 @@ const ROW = styled.div`
 	top: 10%;
 	align-items: center;
 
-	@media (max-width: 500px) {
+	@media screen and (min-width: 100px) and (max-width: 700px) {
 		flex-direction: column;
-		top: 73%;
+		top: 75%;
     left: 50%;
     margin-right: -50%;
 		transform: translate(-50%, -50%);
@@ -30,7 +30,7 @@ const COL = styled.div`
 	margin: -16em -8em 0 13em;
 	justify-content: left;
 
-	@media (max-width: 500px) {
+	@media screen and (min-width: 100px) and (max-width: 700px) {
 		margin: 0px;
   }
 `

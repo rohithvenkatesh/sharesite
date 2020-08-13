@@ -49,7 +49,7 @@ const SUBTEXT = styled.div`
 		animation-fill-mode: forwards, both;
 	}
 	
-	@media (max-width: 500px){
+	@media screen and (min-width: 100px) and (max-width: 700px) {
 		margin-left: 0em; margin-top: -0.3em;
 		width: 8em;
 		font-size: 2em;

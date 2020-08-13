@@ -17,10 +17,12 @@ const LOGO = styled.div`
 	font-size: 12em;
 	border-radius: 200px;
 	letter-spacing: 1px;
-	animation: 3s ${fadein} 0s ease, 2s ${goleft} 1.7s ease forwards;
+	animation: 3s ${fadein} 0.2s ease forwards, 2s ${goleft} 1.7s ease forwards;
+	opacity: 0;
+	transform: translateX(0);
 
-	@media (max-width: 500px) {
-		animation: 2s ${fadein} 0s ease;
+	@media screen and (min-width: 100px) and (max-width: 700px) { {
+		animation: 2s ${fadein} 0.2s ease forwards;
 		font-size: 7em;
   }
 `

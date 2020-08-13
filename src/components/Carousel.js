@@ -32,12 +32,19 @@ const CAROUSEL = styled.div`
 	animation-delay: 3s;
 	background: #ddd;
 
-	@media (max-width: 500px) {
+	@media screen and (min-width: 100px) and (max-width: 700px) {
 		width: 20em;
 		margin-top: 8em;
 		animation: 3s ${fadein} ease forwards;
 		animation-delay: 1s;
-  }
+	}
+
+	@media screen and (min-width: 700px) and (max-width: 1000px) {
+		width: 20em;
+		margin-top: 18em;
+		animation: 3s ${fadein} ease forwards;
+		animation-delay: 1s;
+	}
 `
 
 class Carousel extends Component {
