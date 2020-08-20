@@ -18,10 +18,12 @@ const NAVBAR = styled.nav`
 	}
 `
 
-const TITLE = styled.div`
+const TITLE = styled.a`
+	text-decoration: none;
 	font-size: 2.3em;
 	font-weight: 400;
 	letter-spacing: 2px;
+	color: inherit;
 `
 
 const NAVLIST = styled.div`
@@ -50,10 +52,10 @@ const NAVBUTTON = styled.a`
 
 const Navbar = ()=>(
 	<NAVBAR>
-		<TITLE>/S/</TITLE>
+		<TITLE href='#top'>/S/</TITLE>
 		<NAVLIST>
-			<NAVBUTTON href='#' className='link'>Categories</NAVBUTTON>
-			<NAVBUTTON href='#' className='link'>Purpose</NAVBUTTON>
+			<NAVBUTTON href='#'>Categories</NAVBUTTON>
+			<NAVBUTTON href='#'>Purpose</NAVBUTTON>
 		</NAVLIST>	
 	</NAVBAR>
 )

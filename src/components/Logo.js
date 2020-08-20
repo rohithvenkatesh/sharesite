@@ -25,6 +25,12 @@ const LOGO = styled.div`
 	opacity: 0;
 	transform: translateX(0);
 
+	user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+
 	@media screen and (min-width: 100px) and (max-width: 700px) { 
 		animation: 2s ${fadein} 0.2s ease forwards;
 		font-size: 7em;

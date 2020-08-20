@@ -31,6 +31,7 @@ const CAROUSEL = styled.div`
 	animation: 3s ${fadein} ease forwards;
 	animation-delay: 3s;
 	background: #eee;
+	margin-top: 2em;
 
 	@media screen and (min-width: 100px) and (max-width: 700px) {
 		width: 20em;

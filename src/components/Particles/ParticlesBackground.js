@@ -5,14 +5,11 @@ import styled from 'styled-components'
 import particleStyle from './particleStyle_lines'
 
 const PARTICLES = styled.div`
-	position: absolute;
-	z-index: 0;
 	width: 100vw;
-	height: 100vh;
+	height: 45em;
 
-	@media screen and (orientation:landscape) {
-		width: 100vw;
-		height: 100vh;
+	@media screen and (min-width: 700px) and (max-width: 1300px) {
+		height: 75em;
 	}
 `
 

@@ -4,10 +4,11 @@ import styled from 'styled-components'
 import '../styles.sass'
 import Navbar from '../components/Navbar'
 import Carousel from '../components/Carousel'
-import ParticlesBackground from '../components/Particles/ParticlesBackground'
 import Logo from '../components/Logo'
 import Subtext from '../components/Subtext'
 import Cursor from '../components/Cursor'
+import Categories from '../components/Categories'
+import ParticlesBackground from '../components/Particles/ParticlesBackground'
 
 const ROW = styled.div`
 	display: flex;
@@ -52,10 +53,23 @@ const COL = styled.div`
 		margin: 0px;
   }
 `
+
+const MAIN = styled.section`
+	padding: 0; margin: 0;
+	position: relative;
+`
+
+const CAT = styled.section`
+	padding: 0; margin: 0; margin-top: 400px;
+	background: black;
+	height: 70em;
+	position: static;
+`
+
 export default () => {
 
 	useEffect(() => {
-		const links = document.querySelectorAll(".link");
+		const links = document.querySelectorAll("a");
 		const cursor = document.querySelector('.cursor')
 
 		const handleMouseEnter = () => {
@@ -68,6 +82,7 @@ export default () => {
 			cursor.style.width = '1.3em'
 			cursor.style.height = '1.3em'
 			cursor.style.opacity = '1'
+			cursor.style.zIndex = '999'
 		};
 		links.forEach(link => {
 			link.addEventListener("mouseenter", handleMouseEnter);
@@ -81,17 +96,25 @@ export default () => {
 	})
 
 	return (
-		<div style={{ display: 'flex' }}>
-			<ParticlesBackground />
-			<Navbar />
-			<ROW>
-				<COL>
-					<Logo />
-					<Subtext />
-				</COL>
-				<Carousel />
-			</ROW>
+		<div>
 			<Cursor />
+			<Navbar />
+
+			<MAIN>
+				<ParticlesBackground />
+				<ROW>
+					<COL>
+						<Logo />
+						<Subtext />
+					</COL>
+					<Carousel />
+				</ROW>
+			</MAIN>
+
+			<CAT>
+				<Categories/>
+			</CAT>
+
 		</div>
 	)
 }
