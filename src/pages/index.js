@@ -108,7 +108,7 @@ export default () => {
 			<Cursor />
 			<Navbar />
 
-			<MAIN>
+			<MAIN id='top'>
 				<ParticlesBackground />
 				<ROW>
 					<COL>
@@ -125,7 +125,6 @@ export default () => {
 
 			<PURPOSE>
 				<Purpose/>
-
 			</PURPOSE>
 
 		</div>

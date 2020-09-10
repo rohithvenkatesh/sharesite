@@ -38,7 +38,7 @@ const BODY = styled.div`
 
 const Purpose = () => {
 	return (
-		<PURPOSE>
+		<PURPOSE id='purpose'>
 			<TITLE>What is Share?</TITLE>
 			<DIVIDER/>
 			<BODY>

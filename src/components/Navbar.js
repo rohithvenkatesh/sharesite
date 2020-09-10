@@ -55,7 +55,7 @@ const Navbar = ()=>(
 		<TITLE href='#top'>/S/</TITLE>
 		<NAVLIST>
 			<NAVBUTTON href='#'>Categories</NAVBUTTON>
-			<NAVBUTTON href='#'>Purpose</NAVBUTTON>
+			<NAVBUTTON href='#purpose'>Purpose</NAVBUTTON>
 		</NAVLIST>	
 	</NAVBAR>
 )
