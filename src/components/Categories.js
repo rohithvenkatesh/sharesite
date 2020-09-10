@@ -34,11 +34,6 @@ const CATEGORIES = styled.div`
   }
 `
 
-const TILE = styled.div`
-	/* height:100%;width:100%;
-	padding: 0;
-	margin: 0; */
-`
 const images = [equipment, household, leisure, tools, misc, more].map(image => <div><img width='100%' src={image}/></div>)
 
 const Categories = ()=>{

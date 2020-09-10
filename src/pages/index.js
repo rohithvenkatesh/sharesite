@@ -9,6 +9,7 @@ import Subtext from '../components/Subtext'
 import Cursor from '../components/Cursor'
 import Categories from '../components/Categories'
 import ParticlesBackground from '../components/Particles/ParticlesBackground'
+import Purpose from '../components/Purpose'
 
 const ROW = styled.div`
 	display: flex;
@@ -27,7 +28,7 @@ const ROW = styled.div`
 		transform: translate(-50%, -50%);
 	}
 	
-	@media screen and (min-width: 701px) and (max-width: 1100px) {
+	@media screen and (min-width: 700px) and (max-width: 1100px) {
 		top: 800px;
 		flex-direction: column;
     left: 50%;
@@ -64,6 +65,13 @@ const CAT = styled.section`
 	background: black;
 	height: 70em;
 	position: static;
+`
+const PURPOSE = styled.section`
+	padding: 0; margin: 0;
+	padding-bottom: 2em;
+	background: #eee;
+	position: static;
+	display: inline-block;
 `
 
 export default () => {
@@ -114,6 +122,11 @@ export default () => {
 			<CAT>
 				<Categories/>
 			</CAT>
+
+			<PURPOSE>
+				<Purpose/>
+
+			</PURPOSE>
 
 		</div>
 	)
