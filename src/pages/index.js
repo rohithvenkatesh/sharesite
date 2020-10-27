@@ -62,10 +62,34 @@ const MAIN = styled.section`
 
 const CAT = styled.section`
 	padding: 0; margin: 0; margin-top: 400px;
+	padding-top: 2rem;
 	background: black;
 	height: 70em;
 	position: static;
+
+	@media screen and (min-width: 1201px) and (max-width: 1500px) { 
+		height: 65em;
+  }
+
+	@media screen and (min-width: 1165px) and (max-width: 1300px) {
+		height: 60em;
+  }
 `
+const DIVIDER = styled.div`
+	width: 15%;
+	margin-left: 40%;
+	border-bottom: 0.5em solid #444;
+	margin-bottom: 2.0em;
+`
+
+const CATEGORIESTITLE = styled.div`
+	color: white;
+	font-size: 3rem;
+	/* padding-left: 6rem; */
+	padding-bottom: 0.3em;
+	text-align: center;
+`
+
 const PURPOSE = styled.section`
 	padding: 0; margin: 0;
 	padding-bottom: 2em;
@@ -119,7 +143,9 @@ export default () => {
 				</ROW>
 			</MAIN>
 
-			<CAT>
+			<CAT id='categories'>
+				<CATEGORIESTITLE>Everything We Offer</CATEGORIESTITLE>
+				<DIVIDER/>
 				<Categories/>
 			</CAT>
 
